@@ -1,22 +1,25 @@
 html,
 body {
   height: 100%;
-}
-
-body {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   font-family: system-ui;
 }
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  margin-top: auto;
+main {
+  flex: 1;
 }
-
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  flex: auto;
+  position: flex;
+  width: 100vw;
+}
 * {
   margin: 0;
   padding: 0;
@@ -167,13 +170,6 @@ nav {
   font-size: 14px;
 }
 
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
-}
-
 @media screen and (max-width: 768px) {
   .nav-links {
     display: none;
@@ -213,6 +209,9 @@ header,
 footer {
   background-color: #415a77;
   transition: background-color 0.3s ease;
+  text-align: center;
+  padding: 10px;
+  color: white;
 }
 .video-section h1 {
   margin-bottom: 10px;
@@ -440,4 +439,29 @@ body.dark-mode button i {
     width: 90%;
     text-align: center;
   }
+}
+.proximamente img {
+  width: 30%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.proximamente {
+  display: flex;
+  justify-content: center;
+  background-color: #7bbbfb;
+}
+#tittle-prox {
+  font-size: 50px;
+  color: #345ca4;
+  margin-bottom: 10px;
+  font-family: system-ui;
+  margin-left: 170px;
+}
+#text-prox {
+  font-size: 20px;
+  color: #415a77;
+  margin-bottom: 10px;
+  font-family: system-ui;
+  text-align: center;
 }
