@@ -4,7 +4,6 @@ const themeToggleButton = document.getElementById("theme-toggle");
 const body = document.body;
 const themeIcon = document.getElementById("theme-icon");
 
-// Verificar si hay un tema guardado en localStorage
 if (localStorage.getItem("theme") === "dark") {
   body.classList.add("dark-mode");
   themeIcon.classList.remove("fa-sun");
@@ -15,30 +14,27 @@ if (localStorage.getItem("theme") === "dark") {
   themeIcon.classList.add("fa-sun");
 }
 
-// Cambiar el tema y guardarlo en localStorage
 themeToggleButton.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
 
   if (body.classList.contains("dark-mode")) {
     themeIcon.classList.remove("fa-sun");
     themeIcon.classList.add("fa-moon");
-    localStorage.setItem("theme", "dark"); // Guardar tema oscuro
+    localStorage.setItem("theme", "dark");
   } else {
     themeIcon.classList.remove("fa-moon");
     themeIcon.classList.add("fa-sun");
-    localStorage.setItem("theme", "light"); // Guardar tema claro
+    localStorage.setItem("theme", "light");
   }
 });
 
-// Alternar el menú hamburguesa
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
-// Cargar las traducciones
 let translations = {};
 
-fetch("translations.json")
+fetch("/translations.json")
   .then((response) => {
     if (!response.ok) {
       throw new Error("Error al cargar las traducciones");
@@ -53,7 +49,6 @@ fetch("translations.json")
   })
   .catch((error) => {
     console.error("Error cargando las traducciones:", error);
-    // Mensaje predeterminado en caso de error al cargar las traducciones
     document.getElementById("title").innerText = "Error al cargar el idioma";
     document.getElementById("description").innerText =
       "No se pudieron cargar las traducciones.";
@@ -65,7 +60,6 @@ fetch("translations.json")
       "Error al cargar el contacto";
   });
 
-// Función para cambiar el idioma
 function changeLanguage(lang) {
   if (translations[lang]) {
     document.getElementById("title").innerText = translations[lang].title;
@@ -78,18 +72,16 @@ function changeLanguage(lang) {
       translations[lang].contactTS;
   } else {
     console.error("Idioma no disponible: " + lang);
-    // Fallback en caso de que el idioma no exista en el archivo JSON
     document.getElementById("title").innerText = translations["es"].title;
     document.getElementById("description").innerText =
       translations["es"].description;
   }
 }
 
-// Cambiar el idioma al seleccionar en el selector
 document
   .getElementById("language-selector")
   .addEventListener("change", (event) => {
     const selectedLanguage = event.target.value;
-    localStorage.setItem("language", selectedLanguage); // Guardar el idioma en localStorage
+    localStorage.setItem("language", selectedLanguage);
     changeLanguage(selectedLanguage);
   });

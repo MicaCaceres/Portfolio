@@ -1,4 +1,3 @@
-/* Hacer que el body ocupe toda la altura de la pantalla */
 html,
 body {
   height: 100%;
@@ -15,7 +14,7 @@ footer {
   color: white;
   text-align: center;
   padding: 10px;
-  margin-top: auto; /* Esto hace que el footer siempre esté al final */
+  margin-top: auto;
 }
 
 * {
@@ -64,7 +63,7 @@ nav {
   color: #778da9;
 }
 .sobre-mi {
-  text-align: start; /* Justifica el texto */
+  text-align: start;
   font-size: 28px;
   margin: 0;
   margin-left: 70px;
@@ -109,10 +108,10 @@ nav {
 }
 
 .project img {
-  width: 100%; /* Ajusta según necesites */
-  height: 250px; /* Ajusta según necesites */
-  object-fit: cover; /* O usa `contain` si no quieres que se recorten */
-  border-radius: 10px; /* Opcional, para esquinas redondeadas */
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .project:hover img {
@@ -205,7 +204,6 @@ body.dark-mode {
   color: white;
 }
 
-/* Estilo oscuro (Negro) */
 body.dark-mode {
   background-color: #1b263b;
   color: white;
@@ -217,7 +215,7 @@ body.dark-mode footer {
 }
 nav ul.nav-links {
   display: flex;
-  justify-content: space-between; /* Esto asegura que los elementos estén distribuidos a los extremos */
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
@@ -262,7 +260,6 @@ button i.fa-moon {
   display: none;
 }
 
-/* Cambio de íconos para el modo oscuro */
 body.dark-mode button i.fa-sun {
   display: none;
 }
@@ -275,9 +272,8 @@ button i {
   color: #e0e1dd;
 }
 
-/* Cambiar color de los íconos en el modo oscuro */
 body.dark-mode button i {
-  color: white; /* Color blanco para los íconos en el modo oscuro */
+  color: white;
 }
 
 .footer-buttons {
@@ -383,14 +379,12 @@ body.dark-mode button i {
   transform: translateY(-50%);
 }
 
-/* Estilo al pasar el mouse sobre el selector */
 #language-selector:hover {
-  border-color: #888; /* Borde más oscuro al pasar el mouse */
-  /* Fondo más oscuro */
+  border-color: #888;
+
   background-color: white;
 }
 
-/* Estilo cuando el selector está enfocado */
 #language-selector:focus {
   outline: none;
   border-color: #415a77;
