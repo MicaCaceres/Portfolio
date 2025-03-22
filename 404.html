@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página no encontrada</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+    <script>
+      var path = window.location.pathname;
+      if (path !== "/404.html") {
+        window.location.replace("/404.html");
+      }
+    </script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f8f8f8;
+        padding: 50px;
+      }
+      h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 18px;
+        color: #555;
+      }
+      .animation-container {
+        width: 300px;
+        margin: auto;
+      }
+      a {
+        text-decoration: none;
+        color: #007bff;
+        font-size: 18px;
+        display: inline-block;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading404">Página no encontrada</h1>
+    <p class="message404">
+      Lo sentimos, la página que estás buscando no existe.
+    </p>
+
+    <div class="animation-container" id="lottie-container">
+      <dotlottie-player
+        src="https://lottie.host/8b0b38c1-b750-45dc-aa90-a8d8da5f26f0/KGQS0aijLz.lottie"
+        background="transparent"
+        speed="1"
+        style="width: 400px; height: 400px"
+        loop
+        autoplay
+      ></dotlottie-player>
+    </div>
+
+    <a class="heading404" href="index.html">Volver al inicio</a>
+
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+  </body>
+</html>

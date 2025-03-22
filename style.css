@@ -466,3 +466,22 @@ body.dark-mode button i {
   font-family: system-ui;
   text-align: center;
 }
+
+.lottie-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+dotlottie-player {
+  display: block;
+  align-items: center;
+}
+
+.heading404 h1 {
+  font-family: system-ui;
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #7bbbfb;
+}
