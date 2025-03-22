@@ -1,0 +1,405 @@
+/* Hacer que el body ocupe toda la altura de la pantalla */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto; /* Esto hace que el footer siempre esté al final */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+.nav-links ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.nav-links a:hover {
+  color: #778da9;
+}
+.sobre-mi {
+  text-align: start; /* Justifica el texto */
+  font-size: 28px;
+  margin: 0;
+  margin-left: 70px;
+  margin-right: 70px;
+  background-color: #778da9;
+  padding: 10px;
+  border-radius: 10px;
+  border-color: white 1px;
+  letter-spacing: 1px;
+  color: #1b263b;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.section {
+  padding: 40px 20px;
+  text-align: center;
+}
+.section p {
+  margin-bottom: 10px;
+  align-items: initial;
+}
+
+.project-list {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.project {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+  width: 100%; /* Ajusta según necesites */
+  height: 250px; /* Ajusta según necesites */
+  object-fit: cover; /* O usa `contain` si no quieres que se recorten */
+  border-radius: 10px; /* Opcional, para esquinas redondeadas */
+}
+
+.project:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.project:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 14px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+.video-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.video-container iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Estilo predeterminado (Blanco) */
+body {
+  background-color: #e0e1dd;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header,
+footer {
+  background-color: #415a77;
+  transition: background-color 0.3s ease;
+}
+.video-section h1 {
+  margin-bottom: 10px;
+}
+/* Estilo oscuro (Negro) */
+body.dark-mode {
+  background-color: #0d1b2a;
+  color: white;
+}
+
+/* Estilo oscuro (Negro) */
+body.dark-mode {
+  background-color: #1b263b;
+  color: white;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #0d1b2a;
+}
+nav ul.nav-links {
+  display: flex;
+  justify-content: space-between; /* Esto asegura que los elementos estén distribuidos a los extremos */
+  align-items: center;
+  width: 100%;
+}
+
+#theme-toggle {
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#theme-toggle button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#theme-toggle button:hover {
+  transform: scale(1.1);
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button i.fa-sun {
+  display: inline;
+}
+
+button i.fa-moon {
+  display: none;
+}
+
+/* Cambio de íconos para el modo oscuro */
+body.dark-mode button i.fa-sun {
+  display: none;
+}
+
+body.dark-mode button i.fa-moon {
+  display: inline;
+}
+
+button i {
+  color: #e0e1dd;
+}
+
+/* Cambiar color de los íconos en el modo oscuro */
+body.dark-mode button i {
+  color: white; /* Color blanco para los íconos en el modo oscuro */
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.footer-btn {
+  font-size: 24px;
+  color: white;
+  background-color: #1b263b;
+  padding: 10px;
+  border-radius: 30%;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.footer-btn:hover {
+  background-color: #415a77;
+}
+
+#contact {
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.grid-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.grid-item {
+  background-color: #778da9;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #ddd;
+}
+
+.grid-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.grid-item h2 {
+  font-size: 1.6rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.grid-item ul {
+  list-style-type: none;
+  font-size: 1.1rem;
+  color: #34495e;
+}
+
+.grid-item ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.grid-item ul li:last-child {
+  border-bottom: none;
+}
+
+#language-selector {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 23px;
+  font-size: 16px;
+  color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 20px;
+}
+
+#language-selector::after {
+  content: "\2193";
+  font-size: 18px;
+  color: #333;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Estilo al pasar el mouse sobre el selector */
+#language-selector:hover {
+  border-color: #888; /* Borde más oscuro al pasar el mouse */
+  /* Fondo más oscuro */
+  background-color: white;
+}
+
+/* Estilo cuando el selector está enfocado */
+#language-selector:focus {
+  outline: none;
+  border-color: #415a77;
+  box-shadow: 0 0 5px #1b263b;
+}
+
+.language-selector-container {
+  position: relative;
+  width: 100%;
+  text-align: right;
+  margin-left: 10px;
+}

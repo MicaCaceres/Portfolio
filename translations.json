@@ -1,0 +1,16 @@
+{
+  "es": {
+    "title": "Portfolio de Micaela",
+    "description": "Hola! me llamo Micaela :)\nSoy egresada de la Tecnicatura Universitaria en Programación en UTN-FRP. Me apasiona el mundo del desarrollo y siempre estoy en búsqueda de nuevos desafíos que me permitan crecer como programadora. Me considero una persona responsable, con iniciativa y ganas de aprender continuamente, aplicando mis conocimientos en proyectos que potencien mis habilidades técnicas y creativas. \nAdemás de la programación, disfruto de la música, los videojuegos y el anime/manga, intereses que inspiran mi enfoque en la resolución de problemas y la creatividad en el desarrollo de software.",
+    "skillsTS": "Habilidades",
+    "projectsTS": "Proyectos",
+    "contactTS": "Contactame por :"
+  },
+  "en": {
+    "title": "Micaela's Portfolio",
+    "description": "Hi! my name is Micaela :) \n I have a degree in programming and I am actively looking for job opportunities.I developed an e-commerce-like web using Python, FastAPI, and PostgreSQL as my final project. I enjoy working in team and I am very flexible, capable of adequate my knowledge to any situation given to meet the task demands. I am looking for a workplace where I can grow professionally and continue learning through work-related interactions with my peers. I bring to the table responsibility, high adaptability, diligence and a strong commitment to continuous learning. I will be always willing to incorporate the most effective tools and techniques in order to become a valuable asset to any job.",
+    "skillsTS": "Skills",
+    "projectsTS": "Projects",
+    "contactTS": "Contact me by :"
+  }
+}

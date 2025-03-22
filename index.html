@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="title">Portfolio de Micaela</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">Sobre mí</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+          <div class="language-selector-container">
+            <select id="language-selector">
+              <option value="es">Español</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+
+          <button id="theme-toggle" aria-label="Cambiar tema">
+            <i class="fas fa-sun" id="theme-icon"></i>
+          </button>
+        </ul>
+        <div class="hamburger" id="hamburger">☰</div>
+      </nav>
+    </header>
+
+    <section id="about" class="section">
+      <div class="about-me">
+        <p class="sobre-mi" id="description">
+          Hola! me llamo Micaela.<br />
+          Soy egresada de la Tecnicatura Universitaria en Programación en
+          UTN-FRP. Me apasiona el mundo del desarrollo y siempre estoy en
+          búsqueda de nuevos desafíos que me permitan crecer como programadora.
+          Me considero una persona responsable, con iniciativa y ganas de
+          aprender continuamente, aplicando mis conocimientos en proyectos que
+          potencien mis habilidades técnicas y creativas. <br />Además de la
+          programación, disfruto de la música, los videojuegos y el anime/manga,
+          intereses que inspiran mi enfoque en la resolución de problemas y la
+          creatividad en el desarrollo de software.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h1 id="skillsTS">Habilidades</h1>
+      <br />
+      <div class="grid-container">
+        <!-- Backend -->
+        <div class="grid-item">
+          <h2>Backend</h2>
+          <ul>
+            <li>Python</li>
+            <li>C#</li>
+            <li>Java</li>
+            <li>ASP.NET</li>
+            <li>FastAPI</li>
+            <li>SpringBoot</li>
+            <li>SQLAlchemy</li>
+          </ul>
+        </div>
+
+        <!-- Frontend -->
+        <div class="grid-item">
+          <h2>Frontend</h2>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Vite</li>
+            <li>Chakra UI</li>
+            <li>Bootstrap</li>
+          </ul>
+        </div>
+
+        <!-- Base de Datos -->
+        <div class="grid-item">
+          <h2>Base de Datos</h2>
+          <ul>
+            <li>PostgreSQL</li>
+            <li>SQL Server</li>
+            <li>MySQL</li>
+          </ul>
+        </div>
+
+        <!-- Stacks -->
+        <div class="grid-item">
+          <h2>Stacks</h2>
+          <ul>
+            <li>C#, ASP.NET Core</li>
+            <li>Java, Spring Boot</li>
+            <li>Python, FastAPI</li>
+          </ul>
+        </div>
+
+        <!-- Herramientas -->
+        <div class="grid-item">
+          <h2>Herramientas</h2>
+          <ul>
+            <li>Visual Studio</li>
+            <li>Git/GitHub</li>
+            <li>Visual Studio Code</li>
+            <li>Eclipse</li>
+            <li>Postman</li>
+            <li>PGAdmin</li>
+            <li>Figma</li>
+          </ul>
+        </div>
+
+        <!-- Habilidades Blandas -->
+        <div class="grid-item">
+          <h2>Habilidades Blandas</h2>
+          <ul>
+            <li>Trabajo en equipo</li>
+            <li>Adaptabilidad</li>
+            <li>Comunicación</li>
+            <li>Aprendizaje continuo</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h1 id="projectsTS">Proyectos</h1>
+      <br />
+      <br />
+      <div class="project-list">
+        <div class="project">
+          <a href="ecommerce.html">
+            <img src="Ecommerce.png" alt="Ecommerce" />
+            <div class="overlay" alignItems="center">
+              <h3>Ecommerce</h3>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a href="TaTeTi.html">
+            <img src="TaTeTi.png" alt="TaTeTi" />
+            <div class="overlay">
+              <h3>TaTeTi</h3>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a href="PaginaSorteos.html">
+            <img src="sinImagen.avif" alt="TaTeTi" />
+            <div class="overlay">
+              <h3>Página Sorteos</h3>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a href="RservaCanchas.html">
+            <img src="Canchas.png" alt="TaTeTi" />
+            <div class="overlay">
+              <h3>Reserva de Canchas</h3>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a href="Calabozos.html">
+            <img src="Calabozos.png" alt="TaTeTi" />
+            <div class="overlay">
+              <h3>Calabozos y Dragones</h3>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a href="GestorGastos.html">
+            <img src="sinImagen.avif" alt="TaTeTi" />
+            <div class="overlay">
+              <h3>Gestor de Gastos</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="contact" id="contact">
+      <p marginBottom="10px" id="contactTS">Contactame por:</p>
+
+      <br />
+      <div class="footer-buttons">
+        <a
+          href="mailto:mica.caceres@live.com"
+          target="_blank"
+          class="footer-btn"
+          aria-label="Email"
+        >
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/micaela-caceres-b8b01628b/"
+          target="_blank"
+          class="footer-btn"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a
+          href="https://github.com/MicaCaceres"
+          target="_blank"
+          class="footer-btn"
+          aria-label="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
