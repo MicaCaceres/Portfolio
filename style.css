@@ -441,8 +441,9 @@ body.dark-mode button i {
   }
 }
 .proximamente img {
-  width: 30%;
-  height: 500px;
+  width: 100%;
+  max-width: 500px; /* Limita el ancho máximo a 500px */
+  height: auto;
   object-fit: cover;
   border-radius: 20px;
 }
