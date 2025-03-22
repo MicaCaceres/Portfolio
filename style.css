@@ -40,7 +40,10 @@ nav {
 
 .nav-links {
   display: flex;
-  list-style: none;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  align-items: center;
 }
 .nav-links ul {
   display: flex;
@@ -49,6 +52,7 @@ nav {
 
 .nav-links li {
   margin: 0 15px;
+  list-style: none;
 }
 
 .nav-links a {
@@ -74,6 +78,21 @@ nav {
   border-color: white 1px;
   letter-spacing: 1px;
   color: #1b263b;
+}
+
+@media screen and (max-width: 768px) {
+  .sobre-mi {
+    font-size: 20px; /* Reduce el tamaño de fuente en móviles */
+    margin: 10px 20px; /* Ajusta los márgenes */
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sobre-mi {
+    font-size: 18px;
+    text-align: left;
+  }
 }
 
 .hamburger {
@@ -396,4 +415,29 @@ body.dark-mode button i {
   width: 100%;
   text-align: right;
   margin-left: 10px;
+}
+
+#theme-toggle,
+#language-selector {
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#language-selector {
+  order: 0;
+}
+
+#theme-toggle {
+  order: 1;
+}
+
+@media screen and (max-width: 768px) {
+  #theme-toggle,
+  #language-selector {
+    margin: 10px 0;
+    width: 90%;
+    text-align: center;
+  }
 }
