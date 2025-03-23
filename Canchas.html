@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="title">Portfolio de Micaela</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Sobre mi</a></li>
+          <li><a href="index.html#skills">Habilidades</a></li>
+          <li><a href="index.html#projects">Proyectos</a></li>
+          <li><a href="index.html#contact">Contacto</a></li>
+          <div class="language-selector-container">
+            <select id="language-selector">
+              <option value="es">Español</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+
+          <button id="theme-toggle" aria-label="Cambiar tema">
+            <i class="fas fa-sun" id="theme-icon"></i>
+          </button>
+        </ul>
+        <div class="hamburger" id="hamburger">☰</div>
+      </nav>
+    </header>
+
+    <section class="video-section">
+      <h1 class="tittle-Projects">Gestion de Canchas</h1>
+      <div class="video-container">
+        <video class="video" width="100%" height="700" controls>
+          <source src="media/Canchas.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div>
+        <h1 id="aboutprojectTittle" class="tittle-Projects">
+          Sobre el proyecto
+        </h1>
+        <p id="aboutprojectData">
+          Permite gestionar las canchas disponibles en el sistema y realizar
+          reservas de canchas por usuarios.
+        </p>
+        <h2 id="aboutprojectTecnology" class="tittle-Projects">
+          Tecnologías Utilizadas
+        </h2>
+        <div class="grid-item">
+          <ul class="grid-item">
+            <li>Python</li>
+            <li>FastAPI</li>
+            <li>SQLAlchemy</li>
+            <li>PostgreSQL</li>
+            <li>JavaScript</li>
+            <li>Chakra UI</li>
+            <li>React</li>
+          </ul>
+        </div>
+      </div>
+      <a
+        href="Manual de usuario del software.pdf"
+        download="Manual de usuario del software.pdf"
+        class="download-button"
+        >Repositorio</a
+      >
+    </section>
+
+    <footer class="contact" id="contact">
+      <p id="contactTS">Contactame por:</p>
+
+      <br />
+      <div class="footer-buttons">
+        <a
+          href="mailto:mica.caceres@live.com"
+          target="_blank"
+          class="footer-btn"
+          aria-label="Email"
+        >
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/micaela-caceres-b8b01628b/"
+          target="_blank"
+          class="footer-btn"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a
+          href="https://github.com/MicaCaceres"
+          target="_blank"
+          class="footer-btn"
+          aria-label="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
