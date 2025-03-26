@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks?.classList.toggle("active");
   });
 
-  fetch("translations.json")
+  fetch("/translations.json")
     .then((response) => {
       if (!response.ok) throw new Error("Error al cargar las traducciones");
       return response.json();
