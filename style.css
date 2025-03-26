@@ -6,6 +6,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: system-ui;
+  min-height: 100%;
 }
 main {
   flex: 1;
@@ -14,11 +15,11 @@ main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 footer {
-  flex: auto;
-  position: flex;
-  width: 100vw;
+  width: 100%;
+  flex-shrink: 0;
 }
 * {
   margin: 0;
@@ -200,14 +201,31 @@ nav {
 
 /* Estilo predeterminado (Blanco) */
 body {
-  background-color: #e0e1dd;
-  color: black;
+  background: rgb(219, 123, 210);
+  background: linear-gradient(
+    18deg,
+    rgba(219, 123, 210, 1) 4%,
+    rgba(255, 234, 253, 1) 17%,
+    rgba(235, 102, 220, 1) 27%,
+    rgba(245, 182, 239, 1) 33%,
+    rgba(193, 117, 187, 1) 43%,
+    rgba(227, 190, 224, 1) 52%,
+    rgba(154, 80, 148, 1) 61%,
+    rgba(255, 180, 249, 1) 65%,
+    rgba(255, 66, 240, 1) 76%,
+    rgba(226, 168, 221, 1) 80%,
+    rgba(193, 117, 187, 1) 86%,
+    rgba(10, 8, 8, 1) 100%
+  );
+  background-size: 400% 400%;
+  animation: neonBackground 30s infinite alternate ease-in-out;
+  color: white;
   transition: background-color 0.3s, color 0.3s;
 }
 
 header,
 footer {
-  background-color: #415a77;
+  background-color: #b84094;
   transition: background-color 0.3s ease;
   text-align: center;
   padding: 10px;
@@ -218,8 +236,23 @@ footer {
 }
 /* Estilo oscuro (Negro) */
 body.dark-mode {
-  background-color: #0d1b2a;
+  background: rgb(10, 24, 93);
+  background: linear-gradient(
+    18deg,
+    rgba(10, 24, 93, 1) 0%,
+    rgba(2, 9, 46, 1) 13%,
+    rgba(39, 50, 121, 1) 23%,
+    rgba(7, 25, 126, 1) 30%,
+    rgba(10, 15, 45, 1) 41%,
+    rgba(13, 27, 119, 1) 54%,
+    rgba(10, 16, 50, 1) 70%,
+    rgba(2, 11, 71, 1) 86%,
+    rgba(10, 8, 8, 1) 100%
+  );
+
   color: white;
+  background-size: 400% 400%;
+  animation: neonBackground 40s infinite alternate ease-in-out;
 }
 
 body.dark-mode {
@@ -236,6 +269,9 @@ nav ul.nav-links {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+body.dark-mode .grid-item {
+  background-color: #182280;
 }
 
 #theme-toggle {
@@ -293,7 +329,15 @@ button i {
 body.dark-mode button i {
   color: white;
 }
-
+body.dark-mode header {
+  background-color: #060224;
+}
+body.dark-mode footer {
+  background-color: #060224;
+}
+body.dark-mode .sobre-mi {
+  background-color: #182280;
+}
 .footer-buttons {
   display: flex;
   justify-content: center;
@@ -328,9 +372,14 @@ body.dark-mode button i {
   max-width: 900px;
   width: 100%;
 }
+.sobre-mi {
+  background-color: #c952b9;
+  border: 2px solid #ddd;
+  color: white;
+}
 
 .grid-item {
-  background-color: #778da9;
+  background-color: #c952b9;
   border-radius: 10px;
   padding: 20px;
   text-align: center;
@@ -346,7 +395,7 @@ body.dark-mode button i {
 
 .grid-item h2 {
   font-size: 1.6rem;
-  color: #2c3e50;
+  color: white;
   margin-bottom: 15px;
   font-weight: 600;
   text-transform: uppercase;
@@ -356,7 +405,7 @@ body.dark-mode button i {
 .grid-item ul {
   list-style-type: none;
   font-size: 1.1rem;
-  color: #34495e;
+  color: white;
 }
 
 .grid-item ul li {
@@ -516,4 +565,15 @@ dotlottie-player {
 }
 .download-button:hover {
   background-color: #2c3e50;
+}
+@keyframes neonBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
