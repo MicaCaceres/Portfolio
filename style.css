@@ -50,6 +50,7 @@ nav {
   width: 100%;
   gap: 20px;
   align-items: center;
+  color: #e1e7ef;
 }
 .nav-links ul {
   display: flex;
@@ -62,18 +63,20 @@ nav {
 }
 
 .nav-links a {
-  color: white;
   text-decoration: none;
-  color: white;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 1px;
+  color: #070d1c;
 }
 .nav-links a:hover {
-  color: #daa1d0;
+  color: #56738c;
+}
+body.dark-mode .nav-links a {
+  color: #e1e7ef;
 }
 body.dark-mode .nav-links a:hover {
-  color: #2b13b3;
+  color: #56738c;
 }
 .sobre-mi {
   text-align: start;
@@ -84,7 +87,6 @@ body.dark-mode .nav-links a:hover {
   background-color: #778da9;
   padding: 10px;
   border-radius: 10px;
-  border-color: white 1px;
   letter-spacing: 1px;
   color: #1b263b;
 }
@@ -206,67 +208,37 @@ body.dark-mode .nav-links a:hover {
 
 /* Estilo predeterminado (Blanco) */
 body {
-  background: rgb(219, 123, 210);
-  background: linear-gradient(
-    18deg,
-    rgba(219, 123, 210, 1) 4%,
-    rgba(255, 234, 253, 1) 17%,
-    rgba(235, 102, 220, 1) 27%,
-    rgba(245, 182, 239, 1) 33%,
-    rgba(193, 117, 187, 1) 43%,
-    rgba(227, 190, 224, 1) 52%,
-    rgba(154, 80, 148, 1) 61%,
-    rgba(255, 180, 249, 1) 65%,
-    rgba(255, 66, 240, 1) 76%,
-    rgba(226, 168, 221, 1) 80%,
-    rgba(193, 117, 187, 1) 86%,
-    rgba(10, 8, 8, 1) 100%
-  );
-  background-size: 400% 400%;
-  animation: neonBackground 30s infinite alternate ease-in-out;
-  color: white;
+  background: #ffffff;
 }
 
 header,
 footer {
-  background-color: #b84094;
+  background-color: #ffffff;
   transition: background-color 0.3s ease;
   text-align: center;
   padding: 10px;
-  color: white;
+  color: #e1e7ef;
+}
+header {
+  border-bottom: 0.5px solid #888591;
+}
+footer {
+  border-top: 0.5px solid #888591;
 }
 .video-section h1 {
   margin-bottom: 10px;
 }
 /* Estilo oscuro (Negro) */
 body.dark-mode {
-  background: rgb(10, 24, 93);
-  background: linear-gradient(
-    18deg,
-    rgba(10, 24, 93, 1) 0%,
-    rgba(2, 9, 46, 1) 13%,
-    rgba(39, 50, 121, 1) 23%,
-    rgba(7, 25, 126, 1) 30%,
-    rgba(10, 15, 45, 1) 41%,
-    rgba(13, 27, 119, 1) 54%,
-    rgba(10, 16, 50, 1) 70%,
-    rgba(2, 11, 71, 1) 86%,
-    rgba(10, 8, 8, 1) 100%
-  );
-
+  background: #030711;
   color: white;
   background-size: 400% 400%;
   animation: neonBackground 40s infinite alternate ease-in-out;
 }
 
-body.dark-mode {
-  background-color: #1b263b;
-  color: white;
-}
-
 body.dark-mode header,
 body.dark-mode footer {
-  background-color: #0d1b2a;
+  background-color: #030711;
 }
 nav ul.nav-links {
   display: flex;
@@ -275,7 +247,7 @@ nav ul.nav-links {
   width: 100%;
 }
 body.dark-mode .grid-item {
-  background-color: #182280;
+  background-color: #2d3446;
 }
 
 #theme-toggle {
@@ -327,20 +299,21 @@ body.dark-mode button i.fa-moon {
 }
 
 button i {
-  color: #e0e1dd;
+  color: #0d0e0d;
 }
 
 body.dark-mode button i {
-  color: white;
+  color: #e1e7ef;
 }
 body.dark-mode header {
-  background-color: #060224;
+  background-color: #030711;
 }
 body.dark-mode footer {
-  background-color: #060224;
+  background-color: #030711;
 }
 body.dark-mode .sobre-mi {
-  background-color: #182280;
+  background-color: #2d3446;
+  color: #e1e7ef;
 }
 .footer-buttons {
   display: flex;
@@ -350,28 +323,29 @@ body.dark-mode .sobre-mi {
 }
 
 .footer-btn {
+  color: #546c8c;
   font-size: 24px;
-  color: white;
-  background-color: #b84094;
   padding: 10px;
   border-radius: 20%;
   text-decoration: none;
   transition: background-color 0.3s;
 }
 
-body.dark-mode .footer-btn {
-  background-color: #060224;
-}
 body.dark-mode .footer-btn:hover {
-  background-color: #17033a;
+  background-color: #2d3446;
 }
 .footer-btn:hover {
-  background-color: #bd72b0;
+  background-color: #d9d9d9;
 }
 
 #contact {
+  color: #030711;
   padding: 20px;
   margin-top: 50px;
+}
+
+.dark-mode #contact {
+  color: #e1e7ef;
 }
 
 .grid-container {
@@ -383,19 +357,18 @@ body.dark-mode .footer-btn:hover {
   width: 100%;
 }
 .sobre-mi {
-  background-color: #c952b9;
-  border: 2px solid #ddd;
-  color: white;
+  background-color: #d9d9d9;
+  border: 0.5px solid #0a1044;
 }
 
 .grid-item {
-  background-color: #c952b9;
+  background-color: #d9d9d9;
   border-radius: 10px;
   padding: 20px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 2px solid #ddd;
+  border: 0.5px solid #100d29;
 }
 
 .grid-item:hover {
@@ -405,7 +378,6 @@ body.dark-mode .footer-btn:hover {
 
 .grid-item h2 {
   font-size: 1.6rem;
-  color: white;
   margin-bottom: 15px;
   font-weight: 600;
   text-transform: uppercase;
@@ -415,7 +387,6 @@ body.dark-mode .footer-btn:hover {
 .grid-item ul {
   list-style-type: none;
   font-size: 1.1rem;
-  color: white;
 }
 
 .grid-item ul li {
@@ -449,7 +420,6 @@ body.dark-mode .footer-btn:hover {
 #language-selector::after {
   content: "\2193";
   font-size: 18px;
-  color: #333;
   position: absolute;
   right: 10px;
   top: 50%;
@@ -524,7 +494,6 @@ body.dark-mode .footer-btn:hover {
 }
 #tittle-prox {
   font-size: 150px;
-  color: #ffffff;
   margin-bottom: 10px;
   font-family: system-ui;
   margin-top: 10px;
@@ -532,7 +501,6 @@ body.dark-mode .footer-btn:hover {
 }
 #text-prox {
   font-size: 30px;
-  color: #f5f9fd;
   font-family: system-ui;
   text-align: justify;
   margin-left: 10px;
@@ -559,15 +527,12 @@ dotlottie-player {
 }
 .tittle-Projects {
   font-size: 43px;
-  color: #ffffff;
   padding: 10px;
   margin-bottom: 10px;
   font-family: system-ui;
-  text-decoration: wavy underline;
 }
 .video-section p {
   font-size: 20px;
-  color: #ffffff;
   margin-bottom: 10px;
   font-family: system-ui;
   text-align: justify;
@@ -575,25 +540,24 @@ dotlottie-player {
 .download-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #c952b9;
-  color: white;
+  background-color: #d9d9d9;
   text-align: center;
   border-radius: 5px;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  border-color: white 1px;
   margin-top: 20px;
+  color: #030711;
 }
 body.dark-mode .download-button {
-  background-color: #182280;
+  background-color: #546c8c;
 }
 .download-button:hover {
-  background-color: #b451a2;
+  background-color: #6f8097;
 }
 body.dark-mode .download-button:hover {
-  background-color: #182298;
+  background-color: #6f8097;
 }
 @keyframes neonBackground {
   0% {
